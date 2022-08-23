@@ -1,48 +1,7 @@
 import styled from "styled-components";
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-import axios from "axios";
 import YM from './YMBlog.png';
 
 const TopLayout = ()=>{
-
-  const [postCount, setPostCount] = useState(0);
-  const [postList, setPostList] = useState([]);
-
-  useEffect(()=> {
-    let apiData = {
-        postType: "blog"
-    };
-    
-    axios.post("https://api.dev-lr.com/getPostList", apiData)
-        .then((response) => {
-          setPostCount(response.data["RESULT_DATA"]["PostCount"])
-          setPostList(response.data["RESULT_DATA"]["PostList"])
-          console.log(postCount)
-          console.log(postList)
-        })
-        .catch((error) => {
-            console.log(Error)
-        });
-},[]);
-
-<div className="postContainer">
-  {
-    postList.map(item => {
-      if(item.pinned){
-        return(
-          <PostContainer
-          pinned={true}
-          postDate={item.postDate}
-          postTag={item.postTag}
-          postTitle={item.postTitle}
-          postURL={item.postURL} />
-        );
-      }
-    })
-  }
-</div>
-
   let TopArray = [];
   for (let i=0; i< 3; i++){
     TopArray.push(          <PostContainer>

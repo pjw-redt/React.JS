@@ -10,7 +10,7 @@ const Home = () => {
                 <HomeTitle> Hello, World! </HomeTitle>
                 <HomeLink to="/Main">Blog</HomeLink>
                 <HomeLink to="/Main">Project</HomeLink>
-                <HomeLink to="/Main">Problem Solving</HomeLink>
+                <HomeLink to="/ProblemSol">Problem Solving</HomeLink>
                 <HomeLink to="/About">About</HomeLink>
             </InnerLayout>
         </HomeLayout>

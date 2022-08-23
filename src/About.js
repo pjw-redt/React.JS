@@ -1,10 +1,10 @@
-import Header from "./Header";
+import LeftLayout from "./LeftLayout";
 import styled from "styled-components";
 
 const About = () => {
     return(
       <AboutLayout>
-        <Header>헤더</Header>
+        <LeftLayout>헤더</LeftLayout>
         <Line></Line>
       </AboutLayout>
     )
